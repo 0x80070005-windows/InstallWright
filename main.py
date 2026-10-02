@@ -3,7 +3,7 @@ from pathlib import Path
 
 import Create_setting_file
 
-# !Create_setting_file.main()
+Create_setting_file.main()
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
