@@ -30,19 +30,17 @@ def Create_install():
 def Create_uninstaller():
     script_dir = os.path.dirname(os.path.realpath(__file__))
 
-    os.system("pyinstaller --onefile Create_uninstaller.py")
+    os.system("pyinstaller --onefile Uninstaller.py")
 
     DIR_FILE = script_dir + "/build"
     os.system("rm -rf " + DIR_FILE)
 
-    DIR_FILE = script_dir + "/Create_uninstaller.spec"
+    DIR_FILE = script_dir + "/Uninstaller.spec"
     os.system("rm -rf " + DIR_FILE)
 
-    FIRST = script_dir + "/dist/Create_uninstaller"
+    FIRST = script_dir + "/dist/Uninstaller"
     GET = script_dir + ""
     os.system("cp " + FIRST + " " + GET) 
-
-    os.rename("Create_uninstaller" , "Uninstaller")
 
     DIR_FILE = script_dir + "/dist"
     os.system("rm -rf " + DIR_FILE)
