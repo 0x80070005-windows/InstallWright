@@ -1,5 +1,6 @@
 import os
 
+
 class Product_metadata:
     def product_name():
         product_name = input("Введите название программы - ")
@@ -34,11 +35,6 @@ class Package_and_build:
 
         return source_dir
 
-    def installer_filename():
-        installer_filename = input("Введите имя инсталятора - ")
-        return installer_filename
-
-
     def system():
         system = input("1 - Windows\n2 - linux\n3 - кросплотформенная\nВведите с какими систами будет работать - ")
         if system == "1" or system == "2" or system == "3":
@@ -58,3 +54,11 @@ class Intall:
         elif allow_change_dir == "2":
             return "No"
 
+class Uninstaller:                
+    def create_uninstaller():
+        create_uninstaller_input = input("\n1 - Да\n2 - Нет\nСоздавать деинсталятор - ")
+        if create_uninstaller_input == "1":    
+            return "Yes"
+        
+        elif create_uninstaller_input == "2":
+            return "No"

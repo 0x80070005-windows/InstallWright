@@ -19,8 +19,6 @@ def main():
     source_dir = obtaining_information_by_field.Package_and_build.source_dir()
     text_for_save = text_for_save + "source_dir = " + '"' + source_dir + '"' + "\n"
 
-    installer_filename = obtaining_information_by_field.Package_and_build.installer_filename()
-    text_for_save = text_for_save + "installer_filename = " + '"' + installer_filename + '"' + "\n"
 
     system = obtaining_information_by_field.Package_and_build.system()
     text_for_save = text_for_save + "system = " + '"' + system + '"' + "\n"
@@ -30,7 +28,11 @@ def main():
     text_for_save = text_for_save + "default_install_dir = " + '"' + default_install_dir + '"' + "\n"
 
     allow_change_dir = obtaining_information_by_field.Intall.allow_change_dir()
-    text_for_save = text_for_save + "allow_change_dir = " + '"' + allow_change_dir + '"'
+    text_for_save = text_for_save + "allow_change_dir = " + '"' + allow_change_dir + '"' + "\n"
+
+    create_uninstaller = obtaining_information_by_field.Uninstaller.create_uninstaller()
+    text_for_save = text_for_save + "create_uninstaller = " + '"' + create_uninstaller + '"'
+
 
     with open('setting.py' , 'w') as fp:
         fp.write(text_for_save)

@@ -8,6 +8,7 @@ from pathlib import Path
 import setting
 
 def extract(target_dir):
+    create_uninstaller = setting.create_uninstaller
     zip_path = setting.source_dir
 
     with zipfile.ZipFile(zip_path) as z:
@@ -15,6 +16,20 @@ def extract(target_dir):
         for member in members:
             print(f"  {member.filename}")
             z.extract(member, target_dir)
+
+            if create_uninstaller == "Yes":
+                if os.path.exists("uninstaller.data"):
+                    with open("uninstaller.data" , "r") as file:
+                        uninstaller_data = file.read()
+
+                    text_for_save = uninstaller_data + "\n" + member.filename
+
+                    with open("uninstaller.data", "w") as fp:
+                        fp.write(text_for_save)
+
+                else:
+                    with open("uninstaller.data" , "w") as fp:
+                        fp.write(member.filename)
 
         
 def check_system():
