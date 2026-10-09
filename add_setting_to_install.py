@@ -16,6 +16,6 @@ def insert_lines_block(filename, at_line, new_lines):
 with open("setting.py", 'r', encoding='utf-8') as f:
     setting_lines = ["\t" + line for line in f.readlines()]
 
-insert_lines_block("Installer.py", 10, setting_lines)
+insert_lines_block("Installer.py", 9, setting_lines)
 
 os.remove("setting.py")
