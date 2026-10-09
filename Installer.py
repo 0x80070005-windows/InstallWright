@@ -6,15 +6,7 @@ from pathlib import Path
 
 
 class setting:
-	product_name = "AwesomeApp"
-	product_version = "1.5"
-	publisher = "Kirill Production"
-	description = "Derdl;askd'asd-0asd9asd"
-	source_dir = "/home/kirill/Daemon_user/wpnd.zip"
-	system = "2"
-	default_install_dir = "/home/kirill/config"
-	allow_change_dir = "Yes"
-	create_uninstaller = "Yes"
+
 
 
 
