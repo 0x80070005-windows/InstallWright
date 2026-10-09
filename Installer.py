@@ -5,7 +5,17 @@ import zipfile
 from pathlib import Path
 
 
-import setting
+class setting:
+	product_name = "AwesomeApp"
+	product_version = "1.5"
+	publisher = "Kirill Corporation"
+	description = "Description is empty"
+	source_dir = "/home/kirill/Daemon_user/wpnd.zip"
+	system = "3"
+	default_install_dir = "/home/kirill/config"
+	allow_change_dir = "Yes"
+	create_uninstaller = "Yes"
+
 
 def extract(target_dir):
     create_uninstaller = setting.create_uninstaller
@@ -47,7 +57,8 @@ def check_system():
 
     elif system_user == "Windows":
         if system == "1" or system == "3":
-            print()
+	        print()
+
         else:
             print("The system is not supported.")
             input("\nДля продолжения нажмите Enter")

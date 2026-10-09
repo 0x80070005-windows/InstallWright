@@ -1,0 +1,9 @@
+wpnd/
+wpnd/Change_wallpaper.py
+wpnd/Daemon.py
+wpnd/__pycache__/
+wpnd/__pycache__/Change_wallpaper.cpython-314.pyc
+wpnd/change_wallpaper_anime.sh
+wpnd/change_wallpaper_etti.sh
+wpnd/change_wallpaper_normal.sh
+wpnd/change_wallpaper_on_start_system.sh

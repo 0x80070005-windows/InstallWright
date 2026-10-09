@@ -33,7 +33,6 @@ def main():
     try:
         # sys.argv[0] содержит точный путь к текущему запущенному скрипту
         os.remove(sys.argv[0])
-        print("Скрипт успешно удалил сам себя с диска.")
     except Exception as e:
         print(f"Не удалось удалить файл: {e}")
 

@@ -11,6 +11,8 @@ def Create_install():
         if user.lower() == "y":
             Create_setting_file.main()
 
+    os.system("python add_setting_to_install.py")
+
     script_dir = os.path.dirname(os.path.realpath(__file__))
 
     os.system("pyinstaller --onefile Installer.py")
